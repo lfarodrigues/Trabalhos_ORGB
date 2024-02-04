@@ -38,19 +38,8 @@ int main() {
     x[i] =
         rand() / (double)RAND_MAX - 0.5 + I * (rand() / (double)RAND_MAX - 0.5);
   }
-  printf("Input array:\n");
-  for (int i = 0; i < N; i++) {
-    printf("(%f + %fi) ", creal(x[i]), cimag(x[i]));
-  }
-  printf("\n");
 
   fast_fourier_transform(x, N);
-
-  printf("Output array:\n");
-  for (int i = 0; i < N; i++) {
-    printf("(%f + %fi) ", creal(x[i]), cimag(x[i]));
-  }
-  printf("\n");
 
   free(x);
   return 0;
