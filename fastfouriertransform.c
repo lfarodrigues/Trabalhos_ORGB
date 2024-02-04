@@ -32,7 +32,7 @@ void fast_fourier_transform(double complex *x, int N) {
   free(odd);
 }
 int main() {
-  int N = 100;
+  int N = 100000;
   double complex *x = (double complex *)malloc(N * sizeof(double complex));
   for (int i = 0; i < N; i++) {
     x[i] =
